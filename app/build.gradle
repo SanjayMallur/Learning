@@ -1,0 +1,117 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+apply from: "$rootDir/dependencies.gradle"
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.sanjay.learning"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation libs.kotlinStdLibVersion
+    implementation libs.core
+    implementation libs.appCompat
+    implementation libs.material
+    implementation libs.constraint
+    implementation libs.recyclerview
+
+    implementation libs.koin
+    implementation libs.koinAndroid
+    implementation libs.koinAndroidX
+    implementation libs.koinViewModel
+
+
+    //room
+    implementation libs.room
+    implementation libs.roomKtx
+    kapt libs.roomCompiler
+
+    //paging
+    implementation libs.paging
+    implementation libs.pagingRxJava
+
+    implementation libs.coroutinesRx2
+    implementation libs.coroutinesAndroid
+    testImplementation (testingLibs.kotlinCoroutinesTest) {
+        // conflicts with mockito due to direct inclusion of byte buddy
+        exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
+    }
+
+    implementation testingLibs.mokitoKotlin
+    implementation testingLibs.mokitoDexmaker
+    implementation testingLibs.truth
+    implementation testingLibs.coreTesting
+
+    //glide
+    implementation libs.glide
+    kapt libs.glideCompiler
+
+    // navigation components
+    implementation libs.navigationFragment
+    implementation libs.navigationUIKtx
+    implementation libs.fragmentKtx
+
+    //moshi and retrofit
+    implementation libs.moshiAdapters
+    implementation libs.moshi
+    implementation libs.moshiKotlin
+    kapt libs.moshiCodeGen
+    implementation libs.retrofit
+    implementation libs.retrofitConverer
+
+    //testing
+    testImplementation testingLibs.jUnit
+    androidTestImplementation testingLibs.androidxJunit
+    androidTestImplementation testingLibs.androidxEspresso
+    testImplementation testingLibs.mockitoInline
+    testImplementation testingLibs.kFixture
+    testImplementation testingLibs.koinTest
+}
