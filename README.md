@@ -3,6 +3,16 @@ Learning is a small demo application based on modern Android application tech-st
 Also fetching data from the network and integrating persisted data in the database via repository pattern.
 </p>
 
+## Screenshots 
+
+### Tablet version
+<img src="https://user-images.githubusercontent.com/7569605/121689845-0b2c1480-cabd-11eb-9e6a-9f5e70cdb656.png" align="right" width="100%"/>
+
+### Mobile version
+<img src="https://user-images.githubusercontent.com/7569605/121689963-2dbe2d80-cabd-11eb-857a-f3188978ae4a.jpeg" align="left" width="50%"/>
+<img src="https://user-images.githubusercontent.com/7569605/121690004-39a9ef80-cabd-11eb-9960-0c8ea5172de3.jpeg" align="right" width="50%"/>
+
+
 ## Download release apk
 [Click here to download](https://github.com/SanjayMallur/Learning/releases)
 
