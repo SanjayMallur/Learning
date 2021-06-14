@@ -4,8 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sanjay.learning.data.PokemonDetailsRepository
-import kotlinx.coroutines.delay
+import com.sanjay.learning.data.repositories.PokemonDetailsRepository
 import kotlinx.coroutines.launch
 
 class PokemonDetailsViewModel(

@@ -3,7 +3,7 @@ package com.sanjay.learning.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.sanjay.learning.data.Pokemon
+import com.sanjay.learning.data.entities.Pokemon
 import com.sanjay.learning.databinding.PokemonListItemBinding
 import com.sanjay.learning.glide.ImageLoader
 
@@ -18,7 +18,7 @@ class PokemonViewHolder(
         imageLoader.load(pokemon.getImageUrl()).into(viewBinding.pokemonImageView)
 
         viewBinding.root.setOnClickListener {
-            viewEventListener.onViewEvent(PokeminListViewEvent.OnPokemonClicked(pokemon.name, pokemon.getImageUrl()))
+            viewEventListener.onViewEvent(PokemonListViewEvent.OnPokemonClicked(pokemon.name, pokemon.getImageUrl()))
         }
     }
 

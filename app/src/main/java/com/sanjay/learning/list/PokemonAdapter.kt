@@ -3,7 +3,7 @@ package com.sanjay.learning.list
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import com.sanjay.learning.data.Pokemon
+import com.sanjay.learning.data.entities.Pokemon
 import com.sanjay.learning.glide.ImageLoader
 
 class PokemonAdapter(

@@ -22,10 +22,6 @@ class NetworkPagingSource<ItemType : Any>(
         val result = when {
             data != null -> {
 
-                // By default, initial load size = 3 * NETWORK PAGE SIZE
-                // ensure we're not requesting duplicating items at the 2nd request
-//                val next = pageKeyValue + (params.loadSize / 20)
-
                 val pageKey = buildPageKey(pageKeyValue, data)
                 LoadResult.Page(
                     data = data.result,

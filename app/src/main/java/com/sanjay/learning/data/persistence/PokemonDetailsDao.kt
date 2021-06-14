@@ -1,10 +1,10 @@
-package com.sanjay.learning.persistence
+package com.sanjay.learning.data.persistence
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.sanjay.learning.data.PokemonDetails
+import com.sanjay.learning.data.entities.PokemonDetails
 
 @Dao
 interface PokemonDetailsDao {

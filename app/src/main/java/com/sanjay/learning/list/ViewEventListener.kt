@@ -1,5 +1,5 @@
 package com.sanjay.learning.list
 
 interface ViewEventListener {
-    fun onViewEvent(pokemonListViewEvent: PokeminListViewEvent)
+    fun onViewEvent(pokemonListViewEvent: PokemonListViewEvent)
 }

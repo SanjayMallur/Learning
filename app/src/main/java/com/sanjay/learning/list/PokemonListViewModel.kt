@@ -3,7 +3,7 @@ package com.sanjay.learning.list
 import androidx.lifecycle.*
 import androidx.paging.cachedIn
 import com.sanjay.learning.*
-import com.sanjay.learning.data.PokemonRepository
+import com.sanjay.learning.data.repositories.PokemonRepository
 import com.sanjay.learning.paging.PagerFactory
 
 class PokemonListViewModel(
@@ -15,26 +15,13 @@ class PokemonListViewModel(
     private val _singleViewState = SingleLiveData<PokemonSingleViewState>()
     val pokemonSingleViewState: LiveData<PokemonSingleViewState> = _singleViewState
 
-
-    //private val _pagingDataViewStates = MutableLiveData<PagingData<Pokemon>>()
-//    val pagingDataViewStates: LiveData<PagingData<Pokemon>> = _pagingDataViewStates
     val pagingDataViewStates = pagerFactory.createOffsetPager(pokemonRepository::getPokemonList)
     .flow
     .cachedIn(viewModelScope)
 
-//    init {
-//        setupPaging()
-//    }
-
-//    private fun setupPaging() {
-//        viewModelScope.launch {
-//
-//        }
-//    }
-
-    override fun onViewEvent(pokemonListViewEvent: PokeminListViewEvent) {
+    override fun onViewEvent(pokemonListViewEvent: PokemonListViewEvent) {
         when (pokemonListViewEvent) {
-            is PokeminListViewEvent.OnPokemonClicked ->
+            is PokemonListViewEvent.OnPokemonClicked ->
                 _singleViewState.value = PokemonSingleViewState.NavigateToDetails(
                     pokemonListViewEvent.name,
                     pokemonListViewEvent.imageUrl

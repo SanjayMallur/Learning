@@ -7,7 +7,7 @@ import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.sanjay.learning.R
-import com.sanjay.learning.data.PokemonDetails
+import com.sanjay.learning.data.entities.PokemonDetails
 import com.sanjay.learning.databinding.PokemonDetailsFragmentBinding
 import com.sanjay.learning.glide.ImageLoader
 import org.koin.androidx.viewmodel.ext.android.viewModel

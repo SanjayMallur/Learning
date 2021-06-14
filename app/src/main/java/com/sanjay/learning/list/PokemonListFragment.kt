@@ -29,16 +29,6 @@ class PokemonListFragment : Fragment(R.layout.pokemon_list_fragment) {
     private val pokemonAdapter by inject<PokemonAdapter> {
         parametersOf(this@PokemonListFragment)
     }
-//    private var pagingShowcaseAdapter = ItemsPaginatedAdapter(
-//        viewHolderFactory = { parent, _ ->
-//            PokemonViewHolder.create(
-//                parent,
-//                viewModelPokemon,
-//                ImageLoader.with(this)
-//            )
-//        },
-//        ItemDiffCallback
-//    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,10 +50,6 @@ class PokemonListFragment : Fragment(R.layout.pokemon_list_fragment) {
                 pokemonAdapter.submitData(lifecycle, it)
             }
         }
-//        viewModelPokemon.pagingDataViewStates.observe(viewLifecycleOwner, { pagingData ->
-//            Log.d("observeViewStates: ",pagingData.toString())
-//            pokemonAdapter.submitData(viewLifecycleOwner.lifecycle, pagingData)
-//        })
     }
 
     private fun setupList() {

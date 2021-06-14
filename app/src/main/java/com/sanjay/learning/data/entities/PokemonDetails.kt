@@ -1,4 +1,4 @@
-package com.sanjay.learning.data
+package com.sanjay.learning.data.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

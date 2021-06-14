@@ -3,6 +3,8 @@ package com.sanjay.learning.data
 import android.app.Application
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.flextrade.kfixture.KFixture
+import com.sanjay.learning.data.entities.Pokemon
+import com.sanjay.learning.data.repositories.PokemonRepository
 import com.sanjay.learning.di.mappersModule
 import com.sanjay.learning.di.networkModule
 import com.sanjay.learning.di.persistenceModule
@@ -10,7 +12,7 @@ import com.sanjay.learning.fixture.setField
 import com.sanjay.learning.mappers.PokemonMapper
 import com.sanjay.learning.network.*
 import com.sanjay.learning.paging.Response
-import com.sanjay.learning.persistence.PokemonDao
+import com.sanjay.learning.data.persistence.PokemonDao
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.runBlocking
 import org.junit.*

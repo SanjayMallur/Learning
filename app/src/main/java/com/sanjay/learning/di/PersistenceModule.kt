@@ -1,10 +1,10 @@
 package com.sanjay.learning.di
 
 import androidx.room.Room
-import com.sanjay.learning.persistence.AppDatabase
-import com.sanjay.learning.persistence.PokemonDao
-import com.sanjay.learning.persistence.PokemonDetailsDao
-import com.sanjay.learning.persistence.TypeResponseConverter
+import com.sanjay.learning.data.persistence.AppDatabase
+import com.sanjay.learning.data.persistence.PokemonDao
+import com.sanjay.learning.data.persistence.PokemonDetailsDao
+import com.sanjay.learning.data.persistence.TypeResponseConverter
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 

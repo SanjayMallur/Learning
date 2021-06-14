@@ -1,6 +1,6 @@
 package com.sanjay.learning.details
 
-import com.sanjay.learning.data.PokemonDetails
+import com.sanjay.learning.data.entities.PokemonDetails
 
 sealed class PokemonDetailsViewState {
     data class PokemonDetailsSuccess(val pokemonDetails: PokemonDetails) : PokemonDetailsViewState()

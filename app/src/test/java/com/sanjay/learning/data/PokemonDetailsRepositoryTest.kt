@@ -3,13 +3,15 @@ package com.sanjay.learning.data
 import android.app.Application
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.flextrade.kfixture.KFixture
+import com.sanjay.learning.data.entities.PokemonDetails
+import com.sanjay.learning.data.repositories.PokemonDetailsRepository
 import com.sanjay.learning.di.mappersModule
 import com.sanjay.learning.di.networkModule
 import com.sanjay.learning.di.persistenceModule
 import com.sanjay.learning.fixture.setField
 import com.sanjay.learning.mappers.PokemonMapper
 import com.sanjay.learning.network.*
-import com.sanjay.learning.persistence.PokemonDetailsDao
+import com.sanjay.learning.data.persistence.PokemonDetailsDao
 import kotlinx.coroutines.*
 import org.junit.*
 import org.koin.android.ext.koin.androidContext

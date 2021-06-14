@@ -1,6 +1,9 @@
 package com.sanjay.learning.mappers
 
-import com.sanjay.learning.data.*
+import com.sanjay.learning.data.entities.Pokemon
+import com.sanjay.learning.data.entities.PokemonDetails
+import com.sanjay.learning.data.entities.Type
+import com.sanjay.learning.data.entities.TypeResponse
 import com.sanjay.learning.network.*
 import com.sanjay.learning.paging.Response
 

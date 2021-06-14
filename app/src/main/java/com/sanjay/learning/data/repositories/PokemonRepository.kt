@@ -1,9 +1,10 @@
-package com.sanjay.learning.data
+package com.sanjay.learning.data.repositories
 
+import com.sanjay.learning.data.entities.Pokemon
 import com.sanjay.learning.mappers.PokemonMapper
 import com.sanjay.learning.network.PokemonClient
 import com.sanjay.learning.paging.Response
-import com.sanjay.learning.persistence.PokemonDao
+import com.sanjay.learning.data.persistence.PokemonDao
 
 class PokemonRepository(
     private val pokemonClient: PokemonClient,
@@ -26,7 +27,7 @@ class PokemonRepository(
             pokemonResults.map { pokemon -> pokemon.page = page }
             //insert result into room
             pokemonDao.insertPokemonList(pokemonResults)
-            return Response(
+            Response(
                 count = pokemonResponse.count,
                 next = pokemonResponse.next,
                 previous = pokemonResponse.previous,

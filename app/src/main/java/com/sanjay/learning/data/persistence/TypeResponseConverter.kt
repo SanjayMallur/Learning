@@ -1,8 +1,8 @@
-package com.sanjay.learning.persistence
+package com.sanjay.learning.data.persistence
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
-import com.sanjay.learning.data.TypeResponse
+import com.sanjay.learning.data.entities.TypeResponse
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types

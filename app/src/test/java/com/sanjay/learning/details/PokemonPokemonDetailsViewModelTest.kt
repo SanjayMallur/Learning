@@ -2,12 +2,10 @@ package com.sanjay.learning.details
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.sanjay.learning.CoroutineRule.TestCoroutineRule
-import com.sanjay.learning.data.PokemonDetails
-import com.sanjay.learning.data.PokemonDetailsRepository
+import com.sanjay.learning.data.entities.PokemonDetails
+import com.sanjay.learning.data.repositories.PokemonDetailsRepository
 import com.sanjay.learning.livedata.getOrAwaitValue
-import com.sanjay.learning.livedata.observeForTesting
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
