@@ -25,6 +25,7 @@ Also fetching data from the network and integrating persisted data in the databa
   - Lifecycle - dispose of observing data when lifecycle state changes.
   - ViewModel - UI related data holder, lifecycle aware.
   - Room Persistence - construct a database using the abstract layer.
+  - Paging3 - for fetching items as with pages.
 - Architecture
   - MVVM Architecture (View - DataBinding - ViewModel - Model)
   - Android DataBinding kit for notifying data changes to UI layers.
@@ -34,6 +35,9 @@ Also fetching data from the network and integrating persisted data in the databa
 - [Glide](https://github.com/bumptech/glide) - loading images.
 - [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, cardView.
 
+## Offline and Caching
+The list will be stored in the local database(Room) as we scroll through, when we don't have internet connection list will be updated from database. 
+Also item's detailed information is stored when we click on it and available in offline mode
 
 ## MAD Score
 ![summary](https://user-images.githubusercontent.com/7569605/121675892-e8ddcb00-caab-11eb-8cbc-c6e1a9f48c6d.png)
