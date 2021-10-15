@@ -12,7 +12,7 @@ The application take all the our going transactions for the past week and rounds
 [Click here to download](https://github.com/SanjayMallur/RoundUp/releases)
 
 ## Tech stack & Open-source libraries
-- Minimum SDK level 21
+- Minimum SDK level 23
 - [Kotlin](https://kotlinlang.org/) based, [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
 - [Koin](https://github.com/InsertKoinIO/koin) for dependency injection.
 - JetPack
